@@ -1,0 +1,20 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+	\\
+	As  \\ \\
+	\tab[1cm]$h_\theta(x) = g(\theta^T x)$ \\ \\
+	Taking Derivatives we get\\ \\
+	\tab[1cm]$\frac{\partial J(\theta)}{\partial \theta_J} = - \frac{1}{m} \sum^m_{i=1} y^i \frac{g(\theta^Tx^i)(1 - g(\theta^Tx^i))}{g(\theta^Tx^i)} x_j^i$ \\ \\
+	\tab[2.25cm]$-(1- y^i) \frac{g(\theta^Tx^i)(1 - g(\theta^Tx^i))}{1 - g(\theta^Tx^i)s} x_j^i$ \\ \\
+	\tab[1cm]$\therefore$ Simplifying Dividing and Subtracting we get \\ \\
+	\tab[2.25cm]$= \frac{1}{m} \sum^m_{i=1}[g(\theta^Tx^i) - y^i] x_j^i$\\ \\
+	\tab$H_{jk} = \frac{\partial^2J(\theta)}{\partial \theta_j \partial \theta_k} = \frac{1}{m} \sum^m_{i=1} g(\theta^Tx^i)(1 - g(\theta^Tx^i)) x_j^i x_k^i$ \\ \\
+	Proof to Show that $\geq$ 0 \\ \\ 
+	\tab$z^TH_j(\theta)_z = \frac{1}{m} \sum^d_{\beta=1}\sum^d_{\alpha=1}\sum^m_{i=1} g(\theta^Tx^i)(1 - g(\theta^Tx^i)) z_\alpha x_\alpha^i z_\beta x_\beta^i$ \\ \\
+	As Given \\ \\ 
+	\tab$\sum_{i} \sum_{j} z_ix_iz_jx_j = (x^Tz)^2$ \\ \\
+	So \\ \\
+	\tab$z^TH_j(\theta)_z = \frac{1}{m} \sum^m_{i=1} g(\theta^Tx^i)(1 - g(\theta^Tx^i)) (x^Tz)^2$ \\ \\
+	As $g(\theta^Tx^i) \varepsilon (0, 1)$ and $(x^Tz)^2$ $\geq$ 0 \\ \\ 
+	Hence Proved \\ \\ 
+\end{answer}

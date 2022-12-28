@@ -1,0 +1,15 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+Loglikelihood of training the data \\ \\
+\tab[2.25cm]$l(\phi, \mu_0, \mu_1, \sum) \ =  \sum^n_{i=1}logp(x^i|y^i;\mu_0,\mu_1,\sum) \ +  \sum^n_{i=1}logp(y^i;\phi) $ \\ \\
+\tab[3.25cm]$\approx \sum^n_{i=1} [\frac{1}{2}log\frac{1}{| \sum |} - \frac{1}{2}(x^i-\mu_{y^i})^T\sum^{-1}(x^i-\mu_{y^i}) +\frac{y^i}{2}log\phi + \frac{1 - y^i}{2}log(1-\phi) ]$ \\ \\
+Setting Gradient with respect to zero \\ \\
+\tab[2.25cm]$ \frac{\partial l}{\partial \phi} = \sum^n_{i=1}[\frac{y^i}{2\phi} - \frac{1-y^i}{2(1-\phi)}] $ \\ \\
+\tab[3.25cm]$ = \frac{\sum^n_{i=1}1\{y^i=1\}}{\phi} -  \frac{n - \sum^n_{i=1}1\{y^i=1\}}{1-\phi} $ \\ \\
+Solving for $\phi$ gives the maximum likelihood estimate \\ \\
+\tab[3.25cm]$ \bigtriangledown_{\mu_0l} = -\frac{1}{2} \sum_{i:y^i=0} \bigtriangledown_{\mu_0} (x^i - \mu_0)^T \sum^{-1}(x^i-\mu_0)$ \\ \\
+\tab[3.25cm]$ -\frac{1}{2} \sum_{i:y^i=0} \bigtriangledown_{\mu_0} [\mu^T_0 \sum^{-1} \mu_0 - x^{iT} \sum^{-1}\mu_0 - \mu^T_0\sum^{-1} x^i ]$ \\ \\
+\tab[3.25cm]$ -\frac{1}{2} \sum_{i:y^i=0} [2\sum^{-1}\mu_0-2\sum^{-1}x^i] $ \\ \\
+Similarly for $\mu_1$ \\ \\ 
+\end{answer}

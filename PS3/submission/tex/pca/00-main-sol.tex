@@ -1,0 +1,11 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+\tab$argmin_{u:u^Tu=1} \sum_{i=1}^m ||  x^i - f_u(x^i) ||_2^2 \ = \ argmin_{u:u^Tu=1} \sum_{i=1}^m ||  x^i - u^Tx^iu ||_2^2$\\ \\
+\tab[3cm]$ = \ argmin_{u:u^Tu=1} \sum_{i=1}^m  ((x^i - u^Tx^iu)^T (x^i - u^Tx^iu) )$\\ \\
+\tab[3cm]$ = \ argmin_{u:u^Tu=1} \sum_{i=1}^m  ( x^{i^T}x^i - 2(u^Tx^i)^2 + u^Tu(u^Tx^i)^2  )$\\ \\
+\tab[3cm]$ = \ argmin_{u:u^Tu=1} \sum_{i=1}^m  ( - 2(u^Tx^i)^2 + (u^Tx^i)^2  )$\\ \\
+\tab[3cm]$ = \ argmin_{u:u^Tu=1} \sum_{i=1}^m   - (u^Tx^i)^2   $\\ \\
+\tab[3cm]$ = \ argmax_{u:u^Tu=1} u^T ( \sum_{i=1}^m  x^ix^{i^T}  )u$\\ \\
+Corresponding to Optimization Problem \\ \\
+\end{answer}

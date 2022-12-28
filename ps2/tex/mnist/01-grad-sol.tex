@@ -1,0 +1,21 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\  \\
+\tab $\widehat{y_i} = \frac{e^{x^i}}{\epsilon_k^{e^{x^k}}} $ \\ \\
+\tab $l = - \sum_{y_i}ln\widehat{y_i}$ \\ \\
+Derivation of Softmax \\ \\
+i = j, $\frac{d\widehat{y_i}}{d\widehat{x_i}}$ = $\frac{e^{x_i} \sum_k e^{x_k} - e^{x_i}e^{x_i}} {(\sum_k e^{x_k})^2}$ \\ \\
+i $\neq$ j, $\frac{d\widehat{y_i}}{d\widehat{x_i}}$ = $\frac{ e^{x_i}e^{x_i}} {(\sum_k e^{x_k})^2}$ \\ \\
+
+Derivation of Cross Entropy \\ \\
+
+\tab$\frac{dL}{d\widehat{y}_i} = - \sum_iy_i \frac{1}{\widehat{y}_i}$ \\ \\
+
+\tab$\frac{dL}{d\widehat{y}_i} = - \sum_{i\neq j}y_i \frac{1}{\widehat{y}_i}\frac{d\widehat{y}}{dx_i} - y_i \frac{1}{\widehat{y}_j}\frac{dy_j}{dx_j}$ \\ \\
+
+\tab$\frac{dL}{d\widehat{y}_i} =  \sum_{i=j}y_i\widehat{y}_j + y_i\widehat{y}_j  - y_j$ \\ \\
+
+\tab$\frac{dL}{d\widehat{y}_i} =  \sum_{i=j}y_i\widehat{y}_j  - y_i$ \\ \\
+\tab$\frac{dL}{d\widehat{y}_i} =  \widehat{y}_j  - y_i$ \\ \\
+Hence Proved
+\end{answer}

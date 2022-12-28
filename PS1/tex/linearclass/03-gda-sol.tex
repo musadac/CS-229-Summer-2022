@@ -1,0 +1,22 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+	
+	By Baye's \\
+	
+	\tab$p(y=1|x) = \frac{p(x|y = 1)p(y=1)}{p(x|y = 1)p(y=1) + p(x|y = 0)p(y=0)}$ \\ \\ 
+	As value of $ p(x|y = 1)$ , $p(x|y = 0)$ as well as \\
+	\begin{eqnarray*}
+	p(y) &=& \begin{cases}
+	\phi & \mbox{if~} y = 1 \\
+	1 - \phi & \mbox{if~} y = 0 \end{cases} \\
+	\end{eqnarray*} \\ 
+	So Inserting and Simplifying we get \\ \\ 
+	\tab[2.25cm]=$ \frac{\exp \{-\frac{1}{2}(x-\mu_1)^T\sum^{-1}(x-\mu_1)\}\phi}{\exp \{-\frac{1}{2}(x-\mu_1)^T\sum^{-1}(x-\mu_1)\}\phi + \exp \{-\frac{1}{2}(x-\mu_0)^T\sum^{-1}(x-\mu_0)\}(1-\phi)}$ \\ \\ 
+	Dividing by \\ \\ 
+	\tab[2.25cm]$=\frac{1}{1-\frac{1-\phi}{\phi}\exp(-\frac{1}{2}(x-\mu_0)^T\sum_{-1}(x-\mu_0)+\frac{1}{2}(x-\mu_1)^T\sum_{-1}(x-\mu_1))}$ \\ \\
+	\tab[2.25cm]$=\frac{1}{1 + \exp(-[\sum^{-1}(\mu_1-\mu_0)]^Tx)+\frac{1}{2}(\mu_0+\mu_1)^T\sum^{-1}(\mu_0-\mu_1) ln(\frac{1-\phi}{\phi})}$ \\  \\
+	$\therefore$ As we know $\theta = \sum^{-1}(\mu_1-\mu_0)\ and \ \theta_0 = \frac{1}{2}(\mu_0+\mu_1)^T\sum^{-1}(\mu_0-\mu_1) ln(\frac{1-\phi}{\phi})$ \\ \\
+	So \\ \\
+	\tab[2.25cm]$= \frac{1}{1 + \exp(-(\theta^T x + \theta_0))} \ Proved$
+	
+\end{answer}

@@ -1,0 +1,41 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+Starting with the PDF of the Laplace distribution, g(s) = $1/2 exp(-|s|)$, is the first step. When we incorporate this into the likelihood given a lone example $x^i$, we obtain \\ \\
+$l(W) \ = \ log|W| + \sum_{j=1}^d logexp(-| w_j^Tx^i |)$ \\ \\
+\tab$= \ log|W| - \sum_{j=1}^d| w_j^Tx^i |$ \\ \\
+$\bigtriangledown_w \ l(W) $ = $W^{-T}  -$ 
+$\begin{bmatrix}
+\bigtriangledown w_1 |w_1^Tx^i| \\
+\bigtriangledown w_2 |w_2^Tx^i| \\
+... \\ 
+\bigtriangledown w_d |w_d^Tx^i| \\
+\end{bmatrix}$ \\ \\
+
+\tab = $W^{-T} - $ 
+$\begin{bmatrix}
+sign( w_1^Tx^i)x^{iT} \\
+sign( w_2^Tx^i)x^{iT} \\
+... \\ 
+sign( w_d^Tx^i)x^{iT} \\
+\end{bmatrix}$ \\ \\
+
+\tab = $W^{-T}  -$ 
+$\begin{bmatrix}
+sign( w_1^Tx^i) \\
+sign( w_2^Tx^i)\\
+... \\ 
+sign( w_d^Tx^i) \\
+\end{bmatrix}x^{iT} $ \\ \\
+
+The Updated Rule is \\ \\
+
+\tab $W:= W+\alpha( W^{-T} -  
+\begin{bmatrix}
+sign( w_1^Tx^i) \\
+sign( w_2^Tx^i)\\
+... \\ 
+sign( w_d^Tx^i) \\
+\end{bmatrix}x^{iT} $)
+
+\end{answer}

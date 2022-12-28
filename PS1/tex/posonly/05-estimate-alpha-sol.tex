@@ -1,0 +1,17 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\ 
+Assumptions Let \\ \\
+\tab[2.25cm]$positive \ examples \ = \  P = \{ x:p(t^i=1|x^i=x)=1 \}$ \\ \\ 
+\tab[2.25cm]$negative \ examples \ = \  N = \{ x:p(t^i=0|x^i=x)=1 \}$ \\ \\
+if P and N covers all the set  \\ \\
+\tab[1.25cm]$p(x^i \notin P, y^i=1) = 0 \ This \ means \ x^i \in N \ so\ p(t^i=0|x^i)=1 \ and  \ p(t^i=1|x^i)=0$ \\ \\
+\tab[1.25cm]$p(x^i \in P, y^i=1) = 1 \ This \ means \ x^i \notin N \ so\ p(t^i=0|x^i)=0 \ and  \ p(t^i=1|x^i)=1$\\ \\
+$For \ x \in P \ we \ have \ h(x) = \alpha p (t^i=1|x^i=x) = \alpha  \ So$ \\ \\
+\tab[1.25cm]$ p(h(x^i) = \alpha | y^i = 1) = p(h(x^i) = \alpha | y^i,x^i \in P) . p(x^i \in P | y^i=1)$ \\ \\ 
+\tab[4.25cm]$ = 1 \ . \ p(x^i \in P | y^i=1)$ \\ \\
+\tab[4.25cm]$ = 1 \ . \ 1$\\ \\
+\tab[4.25cm]$ = 1$ \\ \\
+Therefore \\ \\ 
+\tab[3.25cm]$ E[h(x^i)|y^i = 1] = \alpha$ \\ \\ \\ \\
+\end{answer}

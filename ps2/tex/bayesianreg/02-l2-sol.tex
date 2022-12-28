@@ -1,0 +1,15 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+Let $\theta \ belongs \ to \ R^d$ \\ \\
+\tab$ \theta_{MAP} = argmax_{\theta}p(y|x,\theta)p(\theta)$ \\ \\
+\tab[2cm]$ = argmax_{\theta}+logp(y|x,\theta)+logp(\theta)$ \\ \\
+\tab[2cm]$ = argmin_{\theta}-logp(y|x,\theta)-logp(\theta)$ \\ \\
+\tab[2cm]$ = argmin_{\theta}-logp(y|x,\theta)-log(\frac{1}{\sqrt{(2\pi)^d|\eta^2I|}}exp(-\frac{1}{2}\theta^T(\eta^2I)^{-1}\theta))  $ \\ \\
+\tab[2cm]$ = argmin_{\theta}-logp(y|x,\theta)-C+\frac{1}{2\eta^2} \theta^T \theta $ \\ \\
+\tab[2cm]$ = argmin_{\theta}-logp(y|x,\theta)-C+\frac{1}{2\eta^2} ||\theta||_2^2 $ \\ \\
+As $\lambda = \frac{1}{2\eta^2}$ \\ \\
+So \\ \\
+\tab[2cm]$ = argmin_{\theta}-logp(y|x,\theta)-C+\lambda ||\theta||_2^2 $ \\ \\
+Hence Proved \\ \\
+\end{answer}

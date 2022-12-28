@@ -1,0 +1,14 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+
+	\tab[2.25cm]$l(\theta)=logp(y^i | x^i ; \theta)$ \\ \\
+	Using GLM assumption = $\eta = \theta^Tx$\\ \\
+	\tab[2.25cm]$\frac{\partial l(\theta)}{\partial \theta_j} = \frac{\partial logp(y^i|x^i;\theta)}{\partial\theta_j}$\\ \\
+	\tab[3.25cm]$ = \frac{\partial log(\frac{1}{y^i!}exp(\eta^Ty^i-e^\eta))}{\partial\theta_j}+ \frac{\partial log(\frac{1}{y^i!})}{\partial\theta_j}$\\ \\
+	\tab[3.25cm]$ = \frac{\partial((\theta^Tx^i)^Ty^i-e^{\theta Tx^i})}{\partial\theta_j}$\\ \\
+	\tab[3.25cm]$ = \frac{\partial((\sum_k\theta_kx^i_k)y^i-e^{\sum_k\theta_kx^i_k})}{\partial\theta_j}$\\ \\
+	\tab[3.25cm]$ = x^i_jy^i-e^{\sum_k\theta_kx^i_k}x^i_j$\\ \\
+	\tab[3.25cm]$ = (y^i-e^{\theta T x^i})x^i_j$\\ \\
+	So stochastic is \\ \\ 
+	\tab[2.25cm]$\theta_j := \theta_j + \alpha(y^i-e^{\theta T x^i})x^i_j$ \\ \\
+\end{answer}

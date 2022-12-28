@@ -1,0 +1,10 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+$l(\theta^{(t+1)}) = \alpha l_{sup}(\theta^{(t+1)}) +  l_{unsup}(\theta^{(t+1)})$ \\ \\
+Jensen Equality \\ \\
+\tab$\geq \  \alpha l_{sup}(\theta^{(t+1)}) +  \sum_{i=1}^n  \sum_{z^i} Q_i^t z^i log \frac{p(x^i,z^i;\theta^{t+1})}{Q_i^tz^i}$ \\ \\
+\tab$\geq \  \alpha l_{sup}(\theta^{(t)}) +  \sum_{i=1}^n  \sum_{z^i} Q_i^t z^i log \frac{p(x^i,z^i;\theta^{t+1})}{p(z|x;\theta^t)}$ \\ \\
+$\geq \alpha l_{sup}(\theta^{(t)}) +  l_{unsup}(\theta^{(t)})$\\ \\
+$\geq  l(\theta^{(t)})$
+\end{answer}

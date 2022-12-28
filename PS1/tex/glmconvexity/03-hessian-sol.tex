@@ -1,0 +1,19 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer} 
+\\ \\
+\tab[2.25cm]$l(\theta) = -log[p(y;n)]$ \\ \\
+\tab[3.25cm]$= -log[b(y)exp(\eta y-a(\eta))]$ \\ \\
+\tab[3.25cm]$= a(\eta)-\eta y+C$ \\ \\
+\tab[3.25cm]$= a(\theta^Tx)-\theta^Tx y+C$ \\ \\
+GL wrt $\theta$ is \\ \\
+\tab[2.25cm]$\nabla_\theta l (\theta) =\nabla_\theta \eta$ \\ \\
+\tab[3.25cm]$= \frac{\partial}{\partial\eta}a(\eta)x -yx$ \\ \\
+Hessian loss \\ \\
+\tab[2.25cm]$\nabla^2_\theta l (\theta) = \nabla_\theta (\nabla_\theta l(\theta))$ \\ \\
+\tab[3.25cm]$ = \nabla_\theta[\frac{\partial}{\partial\eta}a(\eta)\nabla_\theta \eta x -yx]$ \\ \\
+\tab[3.25cm]$ = x\nabla_\theta[\frac{\partial}{\partial\eta}a(\eta)]$ \\ \\
+\tab[3.25cm]$ = x\nabla_\theta \eta \frac{\partial}{\partial\eta}[\frac{\partial}{\partial\eta}a(\eta)]$ \\ \\
+\tab[3.25cm]$ = xx^T \frac{\partial^2}{\partial\eta^2}a(\eta)$ \\ \\
+\tab[3.25cm]$ = xx^T Var(Y;\eta)$ \\ \\
+As $xx^T$ is Positive Semi Definitive so GLM NLL loss is also PSD
+\end{answer}

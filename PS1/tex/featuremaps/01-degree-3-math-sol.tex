@@ -1,0 +1,11 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+\tab[2.25cm] $J(\theta) = \frac{1}{2} \sum^n_{i=1}(\theta^Tx^i-y^i)^2$ \\ \\
+Differentiate the objective, we get the rule\\ \\ 
+\tab[2.25cm] $\triangledown_\theta J(\theta) = \sum^n_{i=1}(\theta^Tx^i-y^i)(x^i)$\\ \\
+\tab[3.25cm] $\alpha \lambda \sum^n_{i=1}(\theta^Tx^i-y^i)(x^i)$ \\ \\ \\ \\
+$\lambda = Learning Rate $ \\ \\
+So it is  \\ \\
+\tab[2.25cm]$ \theta := \theta - \lambda \sum^n_{i=1}(\theta^Tx^i-y^i)(x^i)$ \\ \\
+\end{answer}

@@ -1,0 +1,13 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+\tab $D_{KL}(P||Q) = -\sum_x P(x)log\frac{P(x)}{Q(x)}$ \\ \\
+\tab[3cm] $  = \sum_x P(x)log\frac{P(x)}{Q(x)}$ \\  \\
+\tab[3cm] $  = log \sum_x P(x)\frac{Q(x)}{P(x)}$ \\ \\
+\tab[3cm] $  = log \sum_x Q(x)$ \\ \\
+\tab[3cm] $  = log \ 1$ \\ \\
+\tab[3cm] $   = 0$ \\ \\
+As we have equality if and only if $\frac{Q(x)}{P(x)} = E_p[\frac{Q(x)}{P(x)}]$  and  P(x) = Q(x) Using Jensen's inequality. \\ \\ 
+So \\ \\
+\tab $D_{KL}(P||Q) = 0$ \\ \\
+\end{answer}

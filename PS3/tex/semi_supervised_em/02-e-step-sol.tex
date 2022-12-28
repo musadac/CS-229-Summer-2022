@@ -1,0 +1,13 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+The latent variables are all the z(i), \\ \\
+From the lecture notes: \\ \\
+\tab$ w_j^i = Q_i(z^i = j ) = \frac{p(x^i|z^i=j;\mu,\sum)p(z^i = j)}{\sum_{l=1}^kp(x^i|z^i=l;\mu\sum)p(z^i=l)} $\\ \\
+\tab[3cm]$ = \frac{  \frac{1}{ \sqrt{(2\pi)^d |\sum_j|}} exp( -\frac{1}{2} (x^i - \mu_j)^T \sum_j^{-1} (x^i - \mu_j)  )\phi_j } {\sum_{l=1}^k  \frac{1}{ \sqrt{(2\pi)^d |\sum_l|}} exp( -\frac{1}{2} (x^i - \mu_l)^T \sum_l^{-1} (x^i - \mu_l)  )\phi_j }$ \\ \\
+
+
+\tab[3cm]$ = \frac{ |\sum_j|^{-\frac{1}{2}} exp( -\frac{1}{2} (x^i - \mu_j)^T \sum_j^{-1} (x^i - \mu_j)  )\phi_j } {\sum_{l=1}^k  |\sum_l|^{-\frac{1}{2}} exp( -\frac{1}{2} (x^i - \mu_l)^T \sum_l^{-1} (x^i - \mu_l)  )\phi_j }$ \\ \\
+
+
+\end{answer}

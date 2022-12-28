@@ -1,0 +1,9 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+$argmin_\theta D_{KL}(\hat{P}||P_\theta) = argmin_\theta \sum_x \hat{P}(x)log\hat{P}(x) - \hat{P}(x)logP_\theta(x)$ \\ \\
+\tab[3cm]$ = argmin_\theta \sum_x - \hat{P}(x)logP_\theta(x)$ \\ \\
+\tab[3cm]$ = argmax_\theta \sum_x \hat{P}(x)logP_\theta(x)$ \\ \\
+\tab[3cm]$ = argmax_\theta \frac{1}{n} \sum_x  \sum_{i=1}^n  \{x^i = x\} logP_\theta(x)$ \\ \\
+\tab[3cm]$ = argmax_\theta  \sum_{i=1}^n  logP_\theta(x^i)$ \\ \\
+\end{answer}

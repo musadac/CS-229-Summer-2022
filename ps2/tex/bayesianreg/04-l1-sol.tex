@@ -1,0 +1,13 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+As Before \\ \\
+\tab$\theta_{MAP} = argmin_\theta - logp(y|x,\theta) - logp(\theta)$ \\ \\
+\tab[2cm]$= argmin_\theta - logp( \frac{1}{\sqrt{(2\pi)^d|\sigma^2I|}} exp [-\frac{1}{2}(\overrightarrow{y} - X\theta)(\sigma^2I)^{-1} (\overrightarrow{y} - X\theta)] ) - log(\prod_{i=1}^dp(\theta_i))$ \\ \\
+\tab[2cm]$= argmin_\theta - C + \frac{1}{2\sigma^2}(\overrightarrow{y} - X\theta)^T(\overrightarrow{y} - X\theta) - log(\frac{1}{(2b)^d} exp [-\frac{||\theta||_1}{b}])$ \\ \\
+\tab[2cm]$= argmin_\theta \frac{1}{2\sigma^2} || X\theta -  \overrightarrow{y} ||_2^2 + \frac{1}{b}||\theta||_1$\\ \\
+\tab[2cm]$= argmin_\theta  || X\theta -  \overrightarrow{y} ||_2^2 + \frac{2\sigma^2}{b}||\theta||_1$\\ \\
+where $\gamma$ = $\frac{2\sigma^2}{b}$ \\ \\
+\tab[2cm]$= argmin_\theta  || X\theta -  \overrightarrow{y} ||_2^2 + \gamma||\theta||_1$\\ \\
+\tab[2cm]$= argmin_\theta  J(\theta)$\\ \\
+\end{answer}

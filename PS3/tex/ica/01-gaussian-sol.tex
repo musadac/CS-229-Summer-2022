@@ -1,0 +1,35 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+l(W) = $nlog|W| + \sum_{i=1}^n \sum_{j=1}^d log \frac{1}{\sqrt{2\pi}} exp (- \frac{1}{2} (w_j^Tx^i)^2 )$ \\ \\
+\tab = $nlog|W| + C - \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^d (w_j^Tx^i)^2 $ \\ \\
+$\bigtriangledown_w \ l(W) $ = $nW^{-T} - \frac{1}{2} \sum_{i=1}^n  $ 
+$\begin{bmatrix}
+\bigtriangledown w_1^T (w_1^Tx^i)^2 \\
+\bigtriangledown w_2^T (w_2^Tx^i)^2 \\
+... \\ 
+\bigtriangledown w_d^T (w_d^Tx^i)^2 \\
+\end{bmatrix}$ \\ \\
+
+\tab[2cm] = $nW^{-T} - \frac{1}{2} \sum_{i=1}^n  $ 
+$\begin{bmatrix}
+2 (w_1^Tx^i)x^{iT} \\
+2 (w_2^Tx^i)x^{iT} \\
+... \\ 
+2 (w_d^Tx^i)x^{iT} \\
+\end{bmatrix}$ \\ \\
+
+\tab[2cm] = $nW^{-T} -  \sum_{i=1}^n  $ 
+$\begin{bmatrix}
+w_1^T(x^ix^{iT}) \\
+w_2^T(x^ix^{iT}) \\
+... \\ 
+w_d^T(x^ix^{iT}) \\
+\end{bmatrix}$ \\ \\
+
+\tab[2cm] = $nW^{-T} -  W \sum_{i=1}^n  x^ix^{iT}$  \\ \\
+\tab[2cm] = $nW^{-T} -  W X^T X$   \\ \\
+$nW^{-1}W^{-T}  \ = \ X^T X $ \\ \\
+$W^T W  \ = \ (\frac{1}{n}X^T X)^{-1} $\\ \\
+This suggests that any W = WU, where U is some full rank unitary matrix, is likewise a valid solution if some W is a valid solution to the relation stated above. The main cause of this uncertainty is the quadratic form that the Gaussian log-likelihood assumes.
+\end{answer}

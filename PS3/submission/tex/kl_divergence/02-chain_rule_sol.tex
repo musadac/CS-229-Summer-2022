@@ -1,0 +1,9 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer}
+\\ \\
+$D_{KL}(P(X,Y)||Q(X, Y)) \ = \ \sum_{x, y} P(x, y)log\frac{P(x,y)}{Q(x,y)}$ \\ \\
+\tab[3cm] $ = \ \sum_{x, y} P(x, y)log\frac{P(x)P(y|x)}{Q(x)Q(y|x)}$ \\ \\
+\tab[3cm] $ = \ \sum_{x, y} P(x, y)log\frac{P(x)}{Q(x)} +P(x, y)log\frac{P(y|x)}{Q(y|x)} $ \\ \\
+\tab[3cm] $ = \ \sum_{x} P(x, y)log\frac{P(x)}{Q(x)} + \sum_{x}P(x)\sum_{y}P(y|x)log\frac{P(y|x)}{Q(y|x)} $ \\ \\
+\tab[3cm] $ = D_{KL}(P(X)||Q(X)) + D_{KL}(P(Y|X)||Q(Y|X)) $ \\ \\
+\end{answer}

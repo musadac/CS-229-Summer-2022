@@ -1,0 +1,17 @@
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\begin{answer} 
+\\ \\
+i. In the high dimensional space $\theta$ can be updated as follow:  \\ \\
+\tab[3cm]$\theta:=\theta \ + \alpha(y^i \ - \ h_\theta( \phi(x^i) ))\phi(x^i)$ \\ \\
+Assuming $\theta^0 \ = \ 0$ \\ \\
+So by this assumption we can know that the $\theta$ will be a linear combination of $\phi(x^i)$  \\ \\
+\tab[3cm]$\theta^i \ = \ \sum_{l=1}^i \beta_l \phi x^l$ \\ \\
+ii. To make prediction $\theta^i. \ \phi(x^{i+1})$ \\ \\
+\tab[3cm]$=  [\sum_{l=1}^i \beta_l^i \phi x^l] \ . \ \phi(x^{i+1})$ \\ \\
+\tab[3cm]$=  \sum_{l=1}^i [\beta_l^i \phi x^l \ . \ \phi(x^{i+1})]$ \\ \\
+\tab[3cm]$=  \sum_{l=1}^i K \beta_l^i [\phi x^l \ . \ \phi(x^{i+1})]$ \\ \\
+So, \\ \\
+\tab[2cm]$h_{\theta(i)}=  \sum_{l=1}^i K \beta_l^i [\phi x^l \ . \ \phi(x^{i+1})]$ \\ \\
+iii. We can update the $\theta$ on new training example $(x^{i+1}\ . \ y^{i+1})$\\ \\
+We will  commute $\beta_i = \alpha(y^i - g(\theta^{(i-1)^T}\phi(x^i)))$ at iteration i + 1. \\ \\
+\end{answer}

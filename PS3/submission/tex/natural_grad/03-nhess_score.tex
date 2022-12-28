@@ -1,0 +1,9 @@
+\item \subquestionpoints{5} \textbf{Fisher Information (alternate form)}
+
+It turns out that the Fisher information can not only be defined as the covariance of the score function,
+but in most situations it can also be represented as the expected negative Hessian of the log-likelihood.
+
+Show that $\E_{y\sim p(y;\theta)}[-\nabla^2_{\theta'} \log p(y;\theta')|_{\theta'=\theta}]=\mathcal{I}(\theta)$.
+
+\textbf{Remark}. The Hessian represents the curvature of a function at a point. This shows that the expected curvature of the log-likelihood function is also equal to the Fisher information matrix. If the curvature of the log-likelihood at a parameter is very steep (i.e. Fisher information is very high), this generally means you need fewer data samples to a estimate that parameter well (assuming data was generated from the distribution with those parameters), and vice versa. The Fisher information matrix associated with a statistical model parameterized by $\theta$ is extremely important in determining how a model behaves as a function of the number of training set examples.
+
